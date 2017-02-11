@@ -8,22 +8,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- splash -->
-        <activity android:name=".splash"
+        <activity
+            android:name=".splash"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar"
-            />
+            android:theme="@android:style/Theme.NoTitleBar" />
         <!-- splash -->
-
+        <activity android:name=".add_schedule"></activity>
     </application>
 
 </manifest>
