@@ -3,19 +3,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_timetable"
             android:icon="@drawable/ic_menu_camera"
             android:title="시간표" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_planner"
             android:icon="@drawable/ic_menu_gallery"
             android:title="강의편람" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_alarm"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="알람" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_setting"
             android:icon="@drawable/ic_menu_manage"
             android:title="설정" />
     </group>
@@ -25,9 +25,9 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="시간표 공유" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_question"
                 android:icon="@drawable/ic_menu_send"
                 android:title="문의" />
         </menu>
