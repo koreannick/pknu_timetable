@@ -27,5 +27,5 @@
         <!-- splash -->
         <activity android:name=".add_schedule"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

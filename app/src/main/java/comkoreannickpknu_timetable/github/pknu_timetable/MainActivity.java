@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "여기에 과목추가 들어갈꺼", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                startActivity(new Intent(getApplicationContext(), add_schedule.class));
             }
         });
 
