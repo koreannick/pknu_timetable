@@ -98,6 +98,9 @@ public class ListAdapter extends BaseAdapter {
         mListData.add(addInfo);
     }
 
+    public void dateRemove(){
+        mListData.clear();
+    }
     public void dataChange(){
         subjectAdapter.notifyDataSetChanged();
     }

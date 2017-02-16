@@ -13,4 +13,9 @@
     tools:context="comkoreannickpknu_timetable.github.pknu_timetable.splash"
     tools:showIn="@layout/app_bar_main">
 
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="comkoreannickpknu_timetable.github.pknu_timetable.fragment_schedule"
+        android:id="@+id/frg_1" />
 </RelativeLayout>

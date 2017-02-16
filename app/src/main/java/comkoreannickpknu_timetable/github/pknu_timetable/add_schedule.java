@@ -49,8 +49,8 @@ public class add_schedule extends Activity {
 }
 class T extends AsyncTask<Void, Void, Void> {
 
-    String[] ids = new String[100];
-    String[] ids_info= new String[100];
+    String[] ids = new String[4000];
+    String[] ids_info= new String[32000];
     String search_subject=add_schedule.etxt_search.getText().toString();
     @Override
     protected Void doInBackground(Void... params) {
@@ -62,14 +62,16 @@ class T extends AsyncTask<Void, Void, Void> {
 
             Elements elements = document.select("th.thl");
             Elements elements2 = document.select("td").not("td.tdl");
-            for(Element e : elements) {
-                ids[i] = e.text();
-                i++;
-
-            }
+            add_schedule.subjectAdapter.dateRemove();
             for(Element e2 : elements2) {
                 ids_info[j] = e2.text();
                 j++;
+            }
+            for(Element e : elements) {
+                ids[i] = e.text();
+                add_schedule.subjectAdapter.addItem(ids[i],ids_info[i*8],ids_info[i*8+1],ids_info[i*8+2],ids_info[i*8+3],ids_info[i*8+4],ids_info[i*8+5],ids_info[i*8+6],ids_info[i*8+7]);
+                i++;
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -79,7 +81,6 @@ class T extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void result) {
         super.onPostExecute(result);
-        add_schedule.subjectAdapter.addItem(ids[0],ids_info[0],ids_info[1],ids_info[2],ids_info[3],ids_info[4],ids_info[5],ids_info[6],ids_info[7]);
         add_schedule.subjectAdapter.dataChange();
     }
 
