@@ -2,13 +2,11 @@ package comkoreannickpknu_timetable.github.pknu_timetable;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,11 +14,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class add_schedule extends Activity {
-    static TextView txt_id;
-    static TextView txt_id_info;
     static EditText etxt_search;
     static Button btn_search;
     static ListView lv_subject;

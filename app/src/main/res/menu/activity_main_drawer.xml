@@ -23,9 +23,9 @@
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_grade"
                 android:icon="@drawable/ic_menu_share"
-                android:title="시간표 공유" />
+                android:title="성적 확인" />
             <item
                 android:id="@+id/nav_question"
                 android:icon="@drawable/ic_menu_send"

@@ -1,5 +1,7 @@
 package comkoreannickpknu_timetable.github.pknu_timetable;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +18,12 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    //Main Fragment탭에 대한 버튼을 받을 멤버변수
+    FragmentManager manager;
+    FragmentTransaction trans;
+    //FragmentTransaction trans;
+    //성적 fragment
+    grade f1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //프래그먼트를 제어하기 위해서는 FragmentManager를 사용해야한다.
+        manager = getFragmentManager();
+        f1 = new grade();
+        // Handle navigation view item clicks here.
     }
 
     @Override
@@ -81,7 +95,6 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_timetable) {
@@ -92,7 +105,12 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_setting) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_grade) {
+            //fragment1호출
+            trans = manager.beginTransaction();
+            trans.addToBackStack(null);
+            trans.replace(R.id.frg_1, f1);
+            trans.commit();
 
         } else if (id == R.id.nav_question) {
 
